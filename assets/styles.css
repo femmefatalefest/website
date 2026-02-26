@@ -94,6 +94,25 @@ body::before {
   margin: 4rem auto;
 }
 
+.hidden-field {
+  display: none;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.form-status.success {
+  color: var(--color-acid);
+}
+
+.form-status.error {
+  color: var(--color-red);
+}
 
 
 /* ================================

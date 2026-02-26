@@ -116,3 +116,77 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const contactForm = document.getElementById("contact-form");
+const contactStatus = document.getElementById("contact-status");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        contactStatus.textContent = "Sending...";
+        contactStatus.className = "form-status";
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                contactStatus.textContent = "Thank you! Your message has been sent.";
+                contactStatus.classList.add("success");
+                contactForm.reset();
+            } else {
+                contactStatus.textContent = "Oops! Something went wrong. Please try again.";
+                contactStatus.classList.add("error");
+            }
+
+        } catch (error) {
+            contactStatus.textContent = "Network error. Please try again.";
+            contactStatus.classList.add("error");
+        }
+    });
+}
+
+const bandForm = document.getElementById("band-form");
+const bandStatus = document.getElementById("band-status");
+
+if (bandForm) {
+    bandForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        bandStatus.textContent = "Sending...";
+        bandStatus.className = "form-status";
+
+        const formData = new FormData(bandForm);
+
+        try {
+            const response = await fetch(bandForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                bandStatus.textContent = "Thank you! Your message has been sent.";
+                bandStatus.classList.add("success");
+                bandForm.reset();
+            } else {
+                bandStatus.textContent = "Oops! Something went wrong. Please try again.";
+                bandStatus.classList.add("error");
+            }
+
+        } catch (error) {
+            bandStatus.textContent = "Network error. Please try again.";
+            bandStatus.classList.add("error");
+        }
+    });
+}
+

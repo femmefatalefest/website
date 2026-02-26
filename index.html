@@ -277,7 +277,10 @@
                 <h2>Contact Us</h2>
                 <p>Questions? Want to sponsor or volunteer? Reach out below!</p>
             </div>
-            <form class="contact-form" autocomplete="off" aria-label="Contact form">
+            <form action="https://formspree.io/f/mwvnyllg" method="post" class="contact-form" autocomplete="off" aria-label="Contact form">
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Femme Fatale Fest">
+                <input type="text" name="_gotcha" class="hidden-field">
+
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required />
                 <label for="email">Email</label>
@@ -285,6 +288,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
                 <button type="submit" class="btn btn-acid">Send Message</button>
+                <p class="form-status" id="contact-status"></p>
             </form>
         </div>
     </section>
@@ -295,7 +299,10 @@
     <section class="submit-band scroll-reveal section-alt1" id="submit-band">
         <div class="container">
             <h2>Submit Your Band</h2>
-            <form class="band-form" autocomplete="off" aria-label="Band submission form">
+            <form action="https://formspree.io/f/xlgwzjbl" method="post" class="band-form" autocomplete="off" aria-label="Band submission form">
+                <input type="hidden" name="_subject" value="New Band Submission - Femme Fatale Fest">
+                <input type="text" name="_gotcha" class="hidden-field">
+
                 <label for="band-name">Band Name</label>
                 <input type="text" id="band-name" name="band-name" required />
                 <label for="contact-email">Contact Email</label>
@@ -305,6 +312,7 @@
                 <label for="links">Links (website, socials, music)</label>
                 <input type="text" id="links" name="links" />
                 <button type="submit" class="btn btn-red">Submit</button>
+                <p class="form-status" id="contact-status"></p>
             </form>
         </div>
     </section>
