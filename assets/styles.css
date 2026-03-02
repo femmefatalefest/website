@@ -601,6 +601,13 @@ section {
 }
 
 
+.hero-strip img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(0.85);
+}
+
 /* ================================
   BUTTONS
 ================================ */
@@ -720,8 +727,41 @@ section {
 
 
 /* ================================
-  CARDS
+  About
 ================================ */
+
+.about {
+justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 3rem 1rem;
+    }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.rosehaven-photo {
+  width: 100%;
+  /* max-width: 600px; */
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+}
+
 
 /* =========================================
   SPONSORS - Modern & Clean
@@ -948,14 +988,18 @@ textarea:focus {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 320px 320px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
 }
 
 .gallery-feature {
   grid-row: span 2;
 }
+
+.gallery-wide {
+  grid-row: span 2;
+}
+
 
 .gallery-item {
   position: relative;
@@ -1050,6 +1094,22 @@ input, textarea {
   background: #0f0f0f;
 }
 
+
+.photo-credit {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.photo-credit a {
+  color: var(--color-acid);
+  text-decoration: none;
+}
+
+.photo-credit a:hover {
+  text-decoration: underline;
+}
 
 
 
