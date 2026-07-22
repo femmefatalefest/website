@@ -114,6 +114,44 @@ body::before {
   color: var(--color-red);
 }
 
+.social-feed {
+    text-align: center;
+}
+
+.social-feed-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.social-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 326px), 1fr)
+    );
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+
+.social-feed-grid .instagram-media {
+    display: block;
+    width: 100% !important;
+    max-width: 540px !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 900px) {
+    .social-feed-grid {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+}
+
 
 /* ================================
    NAVIGATION
@@ -789,7 +827,7 @@ justify-items: center;
 
 .sponsor-card img {
   max-width: 160px;
-  max-height: 80px;
+  max-height: 250px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1109,6 +1147,40 @@ input, textarea {
 
 .photo-credit a:hover {
   text-decoration: underline;
+}
+
+.social-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+    margin: 2rem 0;
+}
+
+.instagram-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.instagram-card iframe {
+    display: block;
+    width: 100%;
+    height: 680px;
+    border: 0;
+    background: #fff;
+}
+
+@media (max-width: 700px) {
+    .social-feed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .instagram-card iframe {
+        height: 720px;
+    }
 }
 
 
