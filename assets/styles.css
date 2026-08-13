@@ -923,6 +923,80 @@ justify-items: center;
   width: 80px;
 }
 
+/* =========================
+   FESTIVAL LINEUP
+========================= */
+
+.lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.lineup-panel {
+    padding: 2rem;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+}
+
+.lineup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid currentColor;
+}
+
+.lineup-day {
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.lineup-date {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* Override the normal band grid inside each night */
+.lineup-panel .band-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.lineup-panel .band-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    text-align: center;
+}
+
+.lineup-panel .band-card h3 {
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .lineup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lineup-panel {
+        padding: 1.25rem;
+    }
+}
+
 
 
 
